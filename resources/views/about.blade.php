@@ -155,7 +155,6 @@
 					<h2 class="section-title">Our Team</h2>
 				</div>
 			</div>
-
 			<div class="row">
 
 				<!-- Start Column 1 -->
