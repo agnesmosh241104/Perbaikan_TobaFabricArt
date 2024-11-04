@@ -1,58 +1,59 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\CheckoutController; // Perbaiki nama controller
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome'); // Halaman beranda
 });
 
-
-Route::get('/', function () {
-    return view('welcome'); // Change 'welcome' if you have a different homepage file
-});
-
-// Route to the "Thank You" page
+// Rute ke halaman "Thank You"
 Route::get('/thankyou', function () {
     return view('thankyou');
-});
+})->name('thankyou');
 
-// Route to the "Shop" page
+// Rute ke halaman "Shop"
 Route::get('/shop', function () {
     return view('shop');
 });
 
-// Route to the "Contact" page
+// Rute ke halaman "Contact"
 Route::get('/contact', function () {
     return view('contact');
 });
 
-// Route to the "Contact" page
+// Rute ke halaman "Service"
 Route::get('/service', function () {
     return view('service');
 });
 
-
-// Route to the "Checkout" page (make sure the filename matches exactly)
-Route::get('/checkout', function () {
-    return view('chekout');
-});
-
-// Route to the "Cart" page
+// Rute ke halaman "Checkout" menggunakan CheckoutController
+Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
+// Rute ke halaman "Cart"
 Route::get('/cart', function () {
     return view('cart');
 })->name('cart');
 
-
-// Route to the "Blog" page
+// Rute ke halaman "Blog"
 Route::get('/blog', function () {
     return view('blog');
 });
 
-// Route to the "About" page
+// Rute ke halaman "About"
 Route::get('/about', function () {
     return view('about');
 });
 
+// Rute ke halaman "Index"
 Route::get('/index', function () {
     return view('index');
 });
+
+// Rute pencarian
+Route::get('/search', [SearchController::class, 'search'])->name('search');
+
+// Rute untuk wishlist
+Route::post('/wishlist/add', [WishlistController::class, 'add']);
+Route::post('/wishlist/remove', [WishlistController::class, 'remove']);

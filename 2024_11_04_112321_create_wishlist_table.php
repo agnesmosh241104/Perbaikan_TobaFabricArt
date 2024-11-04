@@ -4,26 +4,20 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateWishlistsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
         Schema::create('wishlists', function (Blueprint $table) {
-            $table->id(); // wishlist_id INT AUTO_INCREMENT PRIMARY KEY
-            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // user_id INT, Foreign Key
-            $table->foreignId('product_id')->constrained()->onDelete('cascade'); // product_id INT, Foreign Key
-            $table->timestamps(); // added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        }); 
+            $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // jika ingin menghubungkan dengan tabel users
+            $table->string('product_id'); // atau foreignId('product_id')->constrained() jika ada tabel products
+            $table->timestamps();
+        });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('wishlist');
+        Schema::dropIfExists('wishlists');
     }
-};
+}

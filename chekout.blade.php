@@ -2,28 +2,25 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="author" content="Untree.co">
-	<link rel="shortcut icon" href="favicon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Untree.co">
+    <link rel="shortcut icon" href="favicon.png">
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
 
-	<meta name="description" content="" />
-	<meta name="keywords" content="bootstrap, bootstrap4" />
-
-	<!-- Bootstrap CSS -->
-	<link href="{{asset('vendor/css/bootstrap.min.css')}}" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-	<link href="{{asset('vendor/css/tiny-slider.css')}}" rel="stylesheet">
-	<link href="{{asset('vendor/css/style.css')}}" rel="stylesheet">
-	<title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co </title>
+    <!-- Bootstrap CSS -->
+    <link href="{{asset('vendor/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="{{asset('vendor/css/tiny-slider.css')}}" rel="stylesheet">
+    <link href="{{asset('vendor/css/style.css')}}" rel="stylesheet">
+    <title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co</title>
 </head>
 
+<body>
     <!-- Start Header/Navigation -->
-    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
-
+    <nav class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark" aria-label="Furni navigation bar">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Furni<span>.</span></a>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,38 +30,48 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
-                    <!-- <li><a class="nav-link" href="shop.blade.php">Shop</a></li>
-                <li><a class="nav-link" href="about.html">About us</a></li>
-                <li><a class="nav-link" href="services.html">Services</a></li>
-                <li><a class="nav-link" href="blog.html">Blog</a></li>
-                <li><a class="nav-link" href="contact.html">Contact us</a></li> -->
-                    <li><a class="nav-link" href="{{ url('/shop') }}">Shop</a></li>
-                    <li><a class="nav-link" href="{{ url('/about') }}">About us</a></li>
-                    <li><a class="nav-link" href="{{ url('/services') }}">Services</a></li>
-                    <li><a class="nav-link" href="{{ url('/blog') }}">Blog</a></li>
-                    <li><a class="nav-link" href="{{ url('/contact') }}">Contact us</a></li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/shop') }}">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/about') }}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/services') }}">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/blog') }}">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/contact') }}">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/index') }}">H</a>
+                    </li>
                 </ul>
 
+                <form id="searchForm" class="d-flex ms-3" action="{{ url('/search') }}" method="GET">
+                    <input type="text" id="searchInput" name="query" class="form-control" placeholder="Cari Produk..." aria-label="Search">
+                    <button type="submit" class="btn btn-outline-light ms-2">Cari</button>
+                </form>
+
+                <!-- User and Cart Icons -->
                 <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-                <li><a class="nav-link" href="#"><img src="{{asset('vendor/images/user.svg')}}" alt="User Icon"></a></li>
-                <li><a class="nav-link" href="cart.html"><img src="{{asset('vendor/images/cart.svg')}}" alt="Cart Icon"></a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="{{ asset('vendor/images/user.svg') }}" alt="User Icon">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <img src="{{ asset('vendor/images/cart.svg') }}" alt="Cart Icon">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-						<li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
-						<li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
-					</ul>
-				</div>
-			</div>
-				
-		</nav>
-		<!-- End Header/Navigation -->
-
-		<!-- Start Hero Section -->
+</body>
 			<div class="hero">
 				<div class="container">
 					<div class="row justify-content-between">
@@ -170,9 +177,7 @@
 		                  </div>
 		                </div>
 		              </div>
-		            </div>
-
-
+		            </div> 
 		            <div class="form-group">
 		              <label for="c_ship_different_address" class="text-black" data-bs-toggle="collapse" href="#ship_different_address" role="button" aria-expanded="false" aria-controls="ship_different_address"><input type="checkbox" value="1" id="c_ship_different_address"> Ship To A Different Address?</label>
 		              <div class="collapse" id="ship_different_address">
@@ -275,7 +280,6 @@
 		              </div>
 		            </div>
 		          </div>
-
 		          <div class="row mb-5">
 		            <div class="col-md-12">
 		              <h2 class="h3 mb-3 text-black">Your Order</h2>
@@ -288,19 +292,19 @@
 		                  <tbody>
 		                    <tr>
 		                      <td>Top Up T-Shirt <strong class="mx-2">x</strong> 1</td>
-		                      <td>$250.00</td>
+		                      <td>250.00</td>
 		                    </tr>
 		                    <tr>
 		                      <td>Polo Shirt <strong class="mx-2">x</strong>   1</td>
-		                      <td>$100.00</td>
+		                      <td>100.00</td>
 		                    </tr>
 		                    <tr>
 		                      <td class="text-black font-weight-bold"><strong>Cart Subtotal</strong></td>
-		                      <td class="text-black">$350.00</td>
+		                      <td class="text-black">350.00</td>
 		                    </tr>
 		                    <tr>
 		                      <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
-		                      <td class="text-black font-weight-bold"><strong>$350.00</strong></td>
+		                      <td class="text-black font-weight-bold"><strong>350.00</strong></td>
 		                    </tr>
 		                  </tbody>
 		                </table>

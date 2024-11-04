@@ -33,8 +33,6 @@
                     </li>
                     <li><a class="nav-link" href="{{ url('/shop') }}">Shop</a></li>
                     <li><a class="nav-link" href="{{ url('/about') }}">About us</a></li>
-                    <li><a class="nav-link" href="{{ url('/services') }}">Services</a></li>
-                    <li><a class="nav-link" href="{{ url('/blog') }}">Blog</a></li>
                     <li><a class="nav-link" href="{{ url('/contact') }}">Contact us</a></li>
                     <li><a class="nav-link" href="{{ url('/index') }}">H</a></li>
 
@@ -52,16 +50,14 @@
                 </ul>
             </div>
         </div>
-    </nav>
-
-
+    </nav> 
 </nav>
 <div class="hero">
 	<div class="container">
 		<div class="row justify-content-between">
 			<div class="col-lg-5">
 				<div class="intro-excerpt">
-					<h1>Cart</h1>
+					<h1></h1>
 				</div>
 			</div>
 			<div class="col-lg-7">
@@ -94,7 +90,7 @@
 								<td class="product-name">
 									<h2 class="h5 text-black">Product 1</h2>
 								</td>
-								<td>$49.00</td>
+								<td>500.000</td>
 								<td>
 									<div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
 										<div class="input-group-prepend">
@@ -104,8 +100,7 @@
 										<div class="input-group-append">
 											<button class="btn btn-outline-black increase" type="button">&plus;</button>
 										</div>
-									</div>
-
+									</div> 
 								</td>
 								<td>400.000</td>
 								<td><a href="#" class="btn btn-black btn-sm">X</a></td>
@@ -116,9 +111,9 @@
 								<img src="{{url('vendor/images/sortali.jpg')}}" class="img-fluid" alt="Cross Icon">
 								</td>
 								<td class="product-name">
-									<h2 class="h5 text-black">Product 2</h2>
+									<h2 class="h5 text-black">Product2</h2>
 								</td>
-								<td>2.000.000</td>
+								<td>100.000</td>
 								<td>
 									<div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
 										<div class="input-group-prepend">

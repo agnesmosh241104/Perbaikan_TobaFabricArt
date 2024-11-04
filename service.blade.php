@@ -126,7 +126,6 @@
                         <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
                     </div>
                 </div>
-
                 <div class="col-6 col-md-6 col-lg-3 mb-4">
                     <div class="feature">
                         <div class="icon">
