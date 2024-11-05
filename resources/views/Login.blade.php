@@ -13,7 +13,7 @@
             margin: 50px;
             background-color: #f0f8ff;
             color: #333;
-        } 
+        }     
  
         .header {
             background-color: #007BFF;
